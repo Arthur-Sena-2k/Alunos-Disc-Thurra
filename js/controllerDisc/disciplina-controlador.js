@@ -4,12 +4,12 @@ class DisciplinaControlador {
     }
 
     inserir() {
-        const nomeDisciplina = document.querySelector("#nome").value;
-        const codigoDisciplina = Number(document.querySelector("#codigo").value);
-        const disciplina = this.disciplinaServico.inserir(codigoDisciplina, nomeDisciplina);
+        const nomeDisci = document.querySelector("#nome").value;
+        const codigoDisci = Number(document.querySelector("#codigo").value);
+        const disciplina = this.disciplinaServico.inserir(codigoDisci, nomeDisci);
 
         if (disciplina) {
-            this.mostrarDisciplina(nomeDisciplina, codigoDisciplina);
+            this.mostrarDisciplina(nomeDisci, codigoDisci);
             alert('Disciplina inserida com sucesso!');
         } 
         else {
@@ -18,8 +18,8 @@ class DisciplinaControlador {
     }
 
     mostrarDisciplina(nomeDisc, codigoDisc) {
-        const elementoP = document.createElement("p");
-        elementoP.textContent = `${nomeDisc} - ${codigoDisc}`;
+        const elementoDi = document.createElement("d");
+        elementoDi.textContent = `${nomeDisc} - ${codigoDisc}`;
 
         const elementoBotaoApagar = document.createElement("button");
         elementoBotaoApagar.textContent = "X";
@@ -29,8 +29,8 @@ class DisciplinaControlador {
                 event.target.parentElement.remove();
             }
         );
-        elementoP.appendChild(elementoBotaoApagar);
-        document.body.appendChild(elementoP);
+        elementoDi.appendChild(elementoBotaoApagar);
+        document.body.appendChild(elementoDi);
     }
 
     removerDisciplina(codigo) {

@@ -9,10 +9,9 @@ class DisciplinaRepositorio {
     }
 
     remover(codigo) {
-        const indxRemocao = this._disciplinas.findIndex(
-            disciplina => disciplina.codigo === codigo
-        );
-        this._disciplinas.splice(indxRemocao, 1);
+        const indexRemocao = this._disciplinas.findIndex(
+            disciplina => disciplina.codigo === codigo);
+        this._disciplinas.splice(indexRemocao, 1);
     }
 
     listar() {

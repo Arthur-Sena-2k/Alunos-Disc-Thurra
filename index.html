@@ -5,23 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+        <fieldset>
+            <a href="./disciplina.html">
+                <button >Disciplinas</button>
+            </a><br><br>
+            
+            Nome: <input id="nome"> <br>
+            Idade: <input id="idade"> <br><br>
 
-    <a href="./disciplina.html">
-        <button >Disciplinas</button><br>
-    </a>
-    
-    Nome: <input id="nome"> <br>
-    Idade: <input id="idade"> <br>
+            <button onclick="alunoControlador.inserir()">Inserir Aluno</button>
 
-    <button onclick="alunoControlador.inserir()">Inserir</button>
+            <h1>Listagem de Alunos</h1>
+            <p>Nome -- Idade</p>
 
-    <h1>Listagem de Alunos</h1>
-    <p>Nome -- Idade</p>
+            <script src="js/model/aluno.js"></script>
+            <script src="js/repositorio/aluno-repositorio.js"></script>
+            <script src="js/servico/aluno-servico.js"></script>
+            <script src="js/controller/aluno-controlador.js"></script>
+            <script src="js/script.js"></script>
 
-    <script src="js/model/aluno.js"></script>
-    <script src="js/repositorio/aluno-repositorio.js"></script>
-    <script src="js/servico/aluno-servico.js"></script>
-    <script src="js/controller/aluno-controlador.js"></script>
-    <script src="js/script.js"></script>
+
+        </fieldset>
 </body>
 </html>
